@@ -24,7 +24,7 @@ sudo apt purge rpicam-apps-lite
 sudo apt install ffmpeg rpicam-apps libavcodec-dev libavdevice-dev libavformat-dev libswresample-dev -y
 ```
 
-- [ ] Stream Task
+- [ ] Stream Task  
 
 | tabel | x |
 |  ---  | ---  |---|
