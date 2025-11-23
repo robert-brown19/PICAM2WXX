@@ -3,23 +3,29 @@
 ## Trixie
 
 - [ ] OS Task  
+```
+sudo apt update \&\& sudo apt full-upgrade -y
+```
 
-'sudo apt update \&\& sudo apt full-upgrade -y'
-
-
-
-'sudo nmcli con add type wifi con-name PodZero1 ssid PodZero1 802-11-wireless-security.key-mgmt wpa-psk'
-'sudo nmcli --ask con up id "PodZero1"'
-'sudo nmcli con show'
+- [ ] WiFi Task
+```
+sudo nmcli con add type wifi con-name PodZero1 ssid PodZero1 802-11-wireless-security.key-mgmt wpa-psk
+sudo nmcli --ask con up id "PodZero1"
+sudo nmcli con show
 
 sudo nmcli con edit PodZero1
 nmcli> set connection.autoconnect-priority 10
 nmcli> save persistent
+```
 
+- [ ] Package Task
+```
 sudo apt purge rpicam-apps-lite
 sudo apt install ffmpeg rpicam-apps libavcodec-dev libavdevice-dev libavformat-dev libswresample-dev -y
-
-Cam v2 1920 x 1080p47, 1640 × 1232p41 and 640 × 480p206
+```
+| tabel | x |
+|  ---  | ---  |
+|Cam v2| 1920 x 1080p47, 1640 × 1232p41 and 640 × 480p206 |
 
 Cam v3 2304 × 1296p56, 2304 × 1296p30 HDR, 1536 × 864p120
 
