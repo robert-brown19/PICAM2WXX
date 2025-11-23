@@ -25,6 +25,7 @@ sudo apt install ffmpeg rpicam-apps libavcodec-dev libavdevice-dev libavformat-d
 ```
 
 - [ ] Stream Task
+
 | tabel | x |
 |  ---  | ---  |---|
 | Cam v2 | 1920 x 1080p47 | 1640 × 1232p41 and 640 × 480p206 |
