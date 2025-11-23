@@ -59,8 +59,9 @@ rpicam-vid -t 0 --width 1640 --height 1232 --hdr off --nopreview
 ```
 
 - [ ] Create Service Task
-
+```
 sudo nano /etc/systemd/system/streamslow.service
+```
 ```
 \[Unit]
 Description=Start Camera Script
