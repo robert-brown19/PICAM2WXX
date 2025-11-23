@@ -32,6 +32,9 @@ sudo apt purge rpicam-apps-lite -y
 ```
 sudo apt install ffmpeg rpicam-apps libavcodec-dev libavdevice-dev libavformat-dev libswresample-dev -y
 ```
+```
+sudo apt autoremove
+```
 
 - [ ] Stream Task  
 
