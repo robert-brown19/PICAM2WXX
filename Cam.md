@@ -48,7 +48,7 @@ sudo apt autoremove
 ```
 sudo nano streamslow.sh
 ```
-
+```
 \#!/bin/bash
 
 rpicam-vid -t 0 --width 1640 --height 1232 --hdr off --nopreview  
@@ -56,12 +56,12 @@ rpicam-vid -t 0 --width 1640 --height 1232 --hdr off --nopreview
 --awb indoor --denoise off --profile high --level 4.2 --codec libav  
 --libav-format flv -n --framerate 3 -b 1550000 --autofocus-mode default --inline  
 -o "rtmp://192.168.4.48/pi/PiCam51"
-
+```
 
 - [ ] Create Service Task
 
 sudo nano /etc/systemd/system/streamslow.service
-
+```
 \[Unit]
 Description=Start Camera Script
 After=multi-user.target
@@ -70,7 +70,7 @@ ExecStart=/home/fox-admin/streamslow.sh
 Type=idle
 \[Install]
 WantedBy=multi-user.target
-
+```
 
 ```
 sudo chmod 644 /etc/systemd/system/streamslow.service
