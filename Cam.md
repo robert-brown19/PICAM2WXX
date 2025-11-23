@@ -4,7 +4,7 @@
 
 - [ ] OS Task  
 
-' sudo apt update \&\& sudo apt full-upgrade -y '
+'sudo apt update \&\& sudo apt full-upgrade -y'
 
 
 
