@@ -49,7 +49,7 @@ sudo apt autoremove
 sudo nano streamslow.sh
 ```
 ```
-\#!/bin/bash
+#!/bin/bash
 
 rpicam-vid -t 0 --width 1640 --height 1232 --hdr off --nopreview  
 --exposure normal --sharpness 1.2 --contrast 1.5 --brightness 0.3 --saturation 1.0  
@@ -63,13 +63,13 @@ rpicam-vid -t 0 --width 1640 --height 1232 --hdr off --nopreview
 sudo nano /etc/systemd/system/streamslow.service
 ```
 ```
-\[Unit]
+[Unit]
 Description=Start Camera Script
 After=multi-user.target
-\[Service]
+[Service]
 ExecStart=/home/fox-admin/streamslow.sh
 Type=idle
-\[Install]
+[Install]
 WantedBy=multi-user.target
 ```
 
