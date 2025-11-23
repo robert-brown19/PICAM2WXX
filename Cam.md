@@ -26,10 +26,10 @@ sudo apt install ffmpeg rpicam-apps libavcodec-dev libavdevice-dev libavformat-d
 
 - [ ] Stream Task  
 
-| tabel | x |  x |
-|  ---  | ---  |---|  
-| Cam v2 | 1920 x 1080p47 | 1640 × 1232p41 and 640 × 480p206 |  
-| Cam v3 | 2304 × 1296p56 | 2304 × 1296p30 HDR, 1536 × 864p120 |  
+| tabel | x |  x | x |
+|  ---  | ---  | --- |  --- |
+| Cam v2 | 1920 x 1080p47 | 1640 × 1232p41 | 640 × 480p206 |  
+| Cam v3 | 2304 × 1296p56 | 2304 × 1296p30 HDR | 1536 × 864p120 |  
 
 sudo nano streamslow.sh
 
