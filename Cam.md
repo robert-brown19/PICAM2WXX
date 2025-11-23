@@ -10,10 +10,17 @@ sudo apt update \&\& sudo apt full-upgrade -y
 - [ ] WiFi Task
 ```
 sudo nmcli con add type wifi con-name PodZero1 ssid PodZero1 802-11-wireless-security.key-mgmt wpa-psk
+```
+```
 sudo nmcli --ask con up id "PodZero1"
+```
+```
 sudo nmcli con show
-
+```
+```
 sudo nmcli con edit PodZero1
+```
+```
 nmcli> set connection.autoconnect-priority 10
 nmcli> save persistent
 ```
@@ -21,6 +28,8 @@ nmcli> save persistent
 - [ ] Package Task
 ```
 sudo apt purge rpicam-apps-lite
+```
+```
 sudo apt install ffmpeg rpicam-apps libavcodec-dev libavdevice-dev libavformat-dev libswresample-dev -y
 ```
 
@@ -31,7 +40,9 @@ sudo apt install ffmpeg rpicam-apps libavcodec-dev libavdevice-dev libavformat-d
 | Cam v2 | 1920 x 1080p47 | 1640 × 1232p41 | 640 × 480p206 |  
 | Cam v3 | 2304 × 1296p56 | 2304 × 1296p30 HDR | 1536 × 864p120 |  
 
+```
 sudo nano streamslow.sh
+```
 
 \#!/bin/bash
 
@@ -56,12 +67,13 @@ Type=idle
 WantedBy=multi-user.target
 
 
-
+```
 sudo chmod 644 /etc/systemd/system/streamslow.service
-
+```
 Finally, tell systemd to run it at boot:
-
+```
 sudo systemctl enable streamslow.service
-
+```
+```
 sudo systemctl stop streamslow.service
-
+```
