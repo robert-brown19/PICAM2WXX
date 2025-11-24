@@ -6,7 +6,9 @@
 ```
 sudo apt update && sudo apt full-upgrade -y
 ```
-
+```
+sudo apt autoremove
+```
 - [X] WiFi Task
 ```
 sudo nmcli con add type wifi con-name PodZero1 ssid PodZero1 802-11-wireless-security.key-mgmt wpa-psk
