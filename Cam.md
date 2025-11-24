@@ -1,13 +1,13 @@
-# CAM51 Config 11/23/25
+# CAM Config 11/23/25
 
 ## Trixie
 
-- [X] OS Task  
+- [ ] OS Task  
 ```
 sudo apt update && sudo apt full-upgrade -y
 ```
 
-- [X] WiFi Task
+- [ ] WiFi Task
 ```
 sudo nmcli con add type wifi con-name PodZero1 ssid PodZero1 802-11-wireless-security.key-mgmt wpa-psk
 ```
