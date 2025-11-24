@@ -55,7 +55,7 @@ rpicam-vid -t 0 --width 1640 --height 1232 --hdr off --nopreview
 --exposure normal --sharpness 1.2 --contrast 1.5 --brightness 0.3 --saturation 1.0  
 --awb indoor --denoise off --profile high --level 4.2 --codec libav  
 --libav-format flv -n --framerate 3 -b 1550000 --autofocus-mode default --inline  
--o "rtmp://192.168.4.48/pi/PiCam51"
+-o "rtmp://192.168.1.48/pi/PiCam51"
 ```
 
 - [ ] Create Service Task
