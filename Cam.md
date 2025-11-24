@@ -4,7 +4,7 @@
 ### Pi Zero W
 ## Trixie
 
-- [ ] OS Task  
+- [X] OS Task  
 ```
 sudo apt update && sudo apt full-upgrade -y
 ```
