@@ -1,5 +1,7 @@
 # CAM53 Config 11/23/25
 
+### Has Camera
+### Pi Zero W
 ## Trixie
 
 - [ ] OS Task  
