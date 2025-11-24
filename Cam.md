@@ -1,4 +1,4 @@
-# CAM51 Config 11/23/25
+# CAM52 Config 11/23/25
 
 ## Trixie
 
