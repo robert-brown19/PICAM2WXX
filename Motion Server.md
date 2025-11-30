@@ -58,6 +58,20 @@ Testing step
 libcamera-hello
 libcamerify motionplus
 
+## Configuration
+Default Dir /usr/local/var/lib/motion
+```
+sudo mkdir /usr/local/var/lib/motion/conf.d
+```
+```
+sudo nano /usr/local/var/lib/motion/motion.conf
+```
+```
+sudo cp /usr/local/var/lib/motion/camera1-dist.conf /usr/local/var/lib/motion/conf.d/camera.conf
+sudo nano /usr/local/var/lib/motion/conf.d/camera.conf
+
+
+
 netcam_url http://10.49.134.111:8080/101/mjpg
 
 text_left Kitchen
