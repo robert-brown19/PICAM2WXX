@@ -36,18 +36,18 @@ sudo apt install nginx-common nginx-core libnginx-mod-rtmp
 ```
 Append to /etc/ngnix/nginx.conf
 
-rtmp {
-server {
-    listen 1935;
-    timeout 60s;
-    notify_method post;
-    chunk_size 4096;
+rtmp {  
+server {  
+    listen 1935;  
+    timeout 60s;  
+    notify_method post;  
+    chunk_size 4096;  
 
-application pi {
-live on;
-record off;
-        }
-}
+application pi {  
+live on;  
+record off;  
+        }  
+}  
 }
 
 
