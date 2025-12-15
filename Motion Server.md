@@ -69,6 +69,7 @@ libcamerify motionplus
 
 ## Configuration
 Default Dir /usr/local/var/lib/motion
+
 ```
 sudo mkdir /usr/local/var/lib/motion/conf.d
 ```
@@ -108,6 +109,9 @@ Mfoxboltgold
 create database motionplus;
 use motionplus;
 quit;
+```
+```
+sudo cp /usr/local/var/lib/motion/motion-dist.conf /usr/local/var/lib/motion/motion.conf
 ```
 ```
 sudo nano /usr/local/var/lib/motion/motion.conf
