@@ -24,10 +24,14 @@ autoreconf -fiv
 ./configure
 make
 sudo make install
-
-installed in sudo apt install opensc libpam-pkcs11 auditd ufw libpam-pwquality apparmor vlock aide chrony -y
-
 ```
+#### installed in
+ /usr/bin/mkdir -p '/usr/local/var/lib/motion'
+ /usr/bin/install -c -m 644 data/motion-dist.conf data/camera1-dist.conf data/camera2-dist.conf data/camera3-dist.conf data/sound1-dist.conf '/usr/local/var/lib/motion'
+ /usr/bin/mkdir -p '/usr/local/var/lib/motion/webcontrol'
+ /usr/bin/install -c -m 644 data/webcontrol/samplepage.html '/usr/local/var/lib/motion/webcontrol'
+
+
 Add supporting STIG/SCAP required libraries
 ```
 sudo apt install opensc libpam-pkcs11 auditd ufw libpam-pwquality apparmor vlock aide chrony -y
