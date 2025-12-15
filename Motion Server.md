@@ -76,7 +76,10 @@ sudo nano /usr/local/var/lib/motion/motion.conf
 ```
 ```
 sudo cp /usr/local/var/lib/motion/camera1-dist.conf /usr/local/var/lib/motion/conf.d/camera.conf
+```
+```
 sudo nano /usr/local/var/lib/motion/conf.d/camera.conf
+```
 
 
 
