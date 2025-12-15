@@ -100,8 +100,10 @@ FLUSH PRIVILEGES;
 exit
 ```
 ```
-mariadb -u motiondb -p Mfoxboltgold
+mariadb -u motiondb -p
 ```
+Mfoxboltgold
+
 ```
 create database motionplus;
 use motionplus;
@@ -110,13 +112,14 @@ quit;
 ```
 sudo nano /usr/local/var/lib/motion/motion.conf
 ```
+```
 database_type mariadb
 database_dbname motionplus
 database_host localhost
 database_port 3306
 database_user motiondb
 database_password Mfoxboltgold
-
+```
 sudo systemctl status MariaDB
 
 
