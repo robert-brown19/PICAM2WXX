@@ -25,6 +25,8 @@ autoreconf -fiv
 make
 sudo make install
 
+installed in sudo apt install opensc libpam-pkcs11 auditd ufw libpam-pwquality apparmor vlock aide chrony -y
+
 ```
 Add supporting STIG/SCAP required libraries
 ```
@@ -35,7 +37,9 @@ NGINX Install
 sudo apt install nginx-common nginx-core libnginx-mod-rtmp
 ```
 Append to /etc/ngnix/nginx.conf
-
+```
+sudo nano /etc/ngnix/nginx.conf
+```
 rtmp {  
 server {  
     listen 1935;  
