@@ -44,6 +44,7 @@ Append to /etc/nginx/nginx.conf
 ```
 sudo nano /etc/nginx/nginx.conf
 ```
+```
 rtmp {  
 server {  
     listen 1935;  
@@ -57,7 +58,7 @@ record off;
         }  
 }  
 }
-
+```
 
 
 libcam_device camera0
