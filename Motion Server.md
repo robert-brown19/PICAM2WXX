@@ -11,7 +11,7 @@ Once the script has been run and the deb file is created, install it as describe
 
 
 
-Add require Motion libraries
+### Add required Motion libraries
 
 ```
 sudo apt install autoconf automake autopoint build-essential pkgconf libtool libzip-dev libjpeg-dev git libavformat-dev libavcodec-dev libavutil-dev libswscale-dev libavdevice-dev libopencv-dev libwebp-dev gettext libmicrohttpd-dev libmariadb-dev libcamera-dev libcamera-tools libcamera-v4l2 libasound2-dev libpulse-dev libfftw3-dev mariadb-client mariadb-client-core mariadb-common mariadb-server -y
