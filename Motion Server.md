@@ -23,7 +23,7 @@ cd motion
 autoreconf -fiv
 ./configure
 make
-make install
+sudo make install
 
 ```
 Add supporting STIG/SCAP required libraries
