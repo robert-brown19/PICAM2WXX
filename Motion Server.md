@@ -25,7 +25,7 @@ autoreconf -fiv
 make
 sudo make install
 ```
-#### installed in
+### Installed in
  /usr/bin/mkdir -p '/usr/local/var/lib/motion'
  /usr/bin/install -c -m 644 data/motion-dist.conf data/camera1-dist.conf data/camera2-dist.conf data/camera3-dist.conf data/sound1-dist.conf '/usr/local/var/lib/motion'
  /usr/bin/mkdir -p '/usr/local/var/lib/motion/webcontrol'
@@ -40,9 +40,9 @@ NGINX Install
 ```
 sudo apt install nginx-common nginx-core libnginx-mod-rtmp
 ```
-Append to /etc/ngnix/nginx.conf
+Append to /etc/nginx/nginx.conf
 ```
-sudo nano /etc/ngnix/nginx.conf
+sudo nano /etc/nginx/nginx.conf
 ```
 rtmp {  
 server {  
