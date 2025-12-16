@@ -118,7 +118,7 @@ sudo nano /usr/local/var/lib/motion/motion.conf
 ```
 ```
 database_type mariadb
-database_dbname motionplus
+database_dbname motion
 database_host localhost
 database_port 3306
 database_user motiondb
