@@ -59,13 +59,9 @@ record off;
 }  
 }
 ```
-
-
-libcam_device camera0
-
-Testing step
+####  Testing step  
 libcamera-hello
-libcamerify motionplus
+
 
 ## Configuration
 Default Dir /usr/local/var/lib/motion
