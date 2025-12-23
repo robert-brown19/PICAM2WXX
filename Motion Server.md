@@ -77,10 +77,11 @@ sudo cp /usr/local/var/lib/motion/camera1-dist.conf /usr/local/var/lib/motion/co
 sudo nano /usr/local/var/lib/motion/conf.d/camera.conf
 ```
 
-
+PiZero with Motion locally installed and streamed into master motion server
 ```
 netcam_url http://10.49.134.111:8080/101/mjpg
-
+```
+```
 text_left Kitchen
 text_right ip_Address\n%Y-%m-%d\n%T-%q
 text_scale 2
