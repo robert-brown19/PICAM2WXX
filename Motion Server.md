@@ -79,13 +79,18 @@ sudo nano /usr/local/var/lib/motion/conf.d/camera.conf
 
 PiZero with Motion locally installed and streamed into master motion server
 ```
-netcam_url http://10.49.134.111:8080/101/mjpg
+netcam_url http://192.168.1.47:8080/101/mjpg
 ```
+```
+netcam_url rtmp://192.168.1.12/pi/PiCam2W47
+
+```
+#### Client Stream config
 Livestream
 ```
 rpicam-vid -t 0 -n --framerate 30 -b 1000000 --width 970 --height 725 --codec libav --libav-format mpegts -o tcp://0.0.0.0:5556?listen=1
 ```
-Slowstream
+Slowstream through NGINX server
 ```
 rpicam-vid -t 0 --width 1536 --height 864 --hdr off --nopreview \
         --exposure normal --sharpness 1.2 --contrast 1.5 --brightness 0.3 --saturation 1.0 \
