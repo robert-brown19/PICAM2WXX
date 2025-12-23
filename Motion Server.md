@@ -97,7 +97,10 @@ rpicam-vid -t 0 --width 1536 --height 864 --hdr off --nopreview \
         --awb indoor --denoise off --profile high --level 4.2 --codec libav \
         --libav-format flv -n --framerate 3 -b 1550000 --autofocus-mode default --inline \
         -o "rtmp://192.168.1.12/pi/PiCam2W47"
-
+```
+```
+ffmpeg -f v4l2 -input_format h264 -video_size 1280x720 -framerate 30 -i /dev/video0 -vcodec copy -f flv "rtmp://192.168.1.12/pi/PiCam2W47"
+```
 ```
 text_left Kitchen
 text_right ip_Address\n%Y-%m-%d\n%T-%q
