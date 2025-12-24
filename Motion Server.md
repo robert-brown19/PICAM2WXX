@@ -125,8 +125,8 @@ mariadb -u motiondb -p
 Mfoxboltgold
 
 ```
-create database motionplus;
-use motionplus;
+create database motion;
+use motion;
 quit;
 ```
 ```
