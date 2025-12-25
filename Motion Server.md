@@ -82,7 +82,9 @@ PiZero with Motion locally installed and streamed into master motion server
 netcam_url http://192.168.1.47:8080/101/mjpg
 ```
 ```
-netcam_url rtmp://192.168.1.12/pi/PiCam2W47
+netcam_url rtmp://192.168.1.12:1935/pi/PiCam2W47
+v4l2_device /dev/video0
+
 
 ```
 #### Client Stream config
