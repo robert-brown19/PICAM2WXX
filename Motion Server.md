@@ -38,25 +38,114 @@ sudo apt install opensc libpam-pkcs11 auditd ufw libpam-pwquality apparmor vlock
 ```
 NGINX Install
 ```
-sudo apt install nginx-common nginx-core libnginx-mod-rtmp
+sudo apt install nginx-common nginx-core libnginx-mod-rtmp -y
 ```
 Append to /etc/nginx/nginx.conf
 ```
 sudo nano /etc/nginx/nginx.conf
 ```
 ```
-rtmp {  
-server {  
-    listen 1935;  
-    timeout 60s;  
-    notify_method post;  
-    chunk_size 4096;  
-
-application pi {  
-live on;  
-record off;  
-        }  
-}  
+user www-data;
+worker_processes auto;
+worker_rlimit_nofile 65535;
+pid /run/nginx.pid;
+include /etc/nginx/modules-enabled/*.conf;
+ 
+events {
+    worker_connections 1024;
+    multi_accept on;
+    use epoll;
+}
+ 
+http {
+    sendfile on;
+    tcp_nopush on;
+    types_hash_max_size 2048;
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
+    ssl_prefer_server_ciphers on;
+    access_log /var/log/nginx/access.log;
+    error_log /var/log/nginx/error.log;
+    gzip on;
+    gzip_types text/plain application/json application/javascript text/css application/xml text/javascript;
+    include /etc/nginx/conf.d/*.conf;
+    include /etc/nginx/sites-enabled/*;
+ 
+    server {
+        listen 9090;
+ 
+        location / {
+            root /var/www/html;
+            index index.html;
+        }
+ 
+        # HLS Streams für pi
+        location /hlspi/ {
+            root /var/hls;
+            types {
+                application/vnd.apple.mpegurl m3u8;
+                video/mp2t ts;
+            }
+            add_header Cache-Control no-cache;
+        }
+ 
+        # HLS Streams für zero
+        location /hlszero/ {
+            root /var/hls;
+            types {
+                application/vnd.apple.mpegurl m3u8;
+                video/mp2t ts;
+            }
+            add_header Cache-Control no-cache;
+        }
+ 
+        access_log /var/log/nginx/access.log;
+        error_log /var/log/nginx/error.log;
+    }
+}
+ 
+rtmp {
+    server {
+        listen 1935;
+        timeout 30s;
+        chunk_size 4096;
+        allow publish all;
+        allow play all;
+        play_restart on;
+        idle_streams off;
+        drop_idle_publisher 60s;
+        max_message 8M;
+        max_connections 512;
+        respawn on;
+ 
+        application pi {
+            live on;
+            record off;
+ 
+            hls on;
+            hls_path /var/hls/hlspi;
+            hls_fragment 8;
+            hls_playlist_length 16;
+            hls_type live;
+            sync 100ms;
+            hls_cleanup on;
+        }
+ 
+        application zero {
+            live on;
+            record off;
+ 
+            hls on;
+            hls_path /var/hls/hlszero;
+            hls_fragment 8;
+            hls_playlist_length 16;
+            hls_type live;
+            sync 100ms;
+            hls_cleanup on;
+ 
+        }
+    }
 }
 ```
 ####  Testing step  
