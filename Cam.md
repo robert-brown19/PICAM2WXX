@@ -75,15 +75,26 @@ nice -n -19 rpicam-vid -t 0 --width 1920 --height 1080 \
 ```
 - [ ] Create Service Task
 ```
-sudo nano /etc/systemd/system/streamslow.service
+sudo nano /etc/systemd/system/streamsteady.service
 ```
 ```
 [Unit]
-Description=Start Camera Script
-After=multi-user.target
+Description=Start Camera stream service
+After=network.target
+Wants=network-online.target
+StartLimitIntervalSec=3
+StartLimitBurst=5
+
 [Service]
-ExecStart=/home/fox-admin/streamslow.sh
-Type=idle
+Type=simple
+ExecStartPre=/bin/sleep 1
+Nice=-12
+Restart=always
+RestartSec=5
+User=root
+WorkingDirectory=/home/fox-admin
+ExecStart=/home/fox-admin/streamsteady.sh
+
 [Install]
 WantedBy=multi-user.target
 ```
