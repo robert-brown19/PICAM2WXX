@@ -145,6 +145,24 @@ database_port 3306
 database_user motiondb
 database_password Mfoxboltgold
 ```
+
+motion.service
+
+[Unit]
+Description=motion Server
+
+[Service]
+ExecStart=/usr/local/bin/motion
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+
+
+/usr/local/bin/motionplus
 sudo systemctl status MariaDB
 
 
