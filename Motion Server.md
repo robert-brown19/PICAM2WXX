@@ -165,6 +165,40 @@ sudo cp /usr/local/var/lib/motion/camera1-dist.conf /usr/local/var/lib/motion/co
 ```
 sudo nano /usr/local/var/lib/motion/conf.d/camera.conf
 ```
+####  Create Motion Service
+```
+sudo nano /etc/systemd/system/motion.service
+```
+```
+[Unit]
+Description=motion v5 Server
+After=network.target
+Wants=network-online.target
+StartLimitIntervalSec=3
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStartPre=/bin/sleep 1
+Nice=-12
+Restart=always
+RestartSec=5
+User=root
+ExecStart=/usr/local/bin/motion
+
+[Install]
+WantedBy=multi-user.target
+```
+```
+sudo chmod 644 /etc/systemd/system/motion.service
+```
+
+/usr/local/bin/motion
+
+Finally, tell systemd to run it at boot:
+```
+sudo systemctl enable motion.service
+```
 
 PiZero with Motion locally installed and streamed into master motion server
 ```
