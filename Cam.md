@@ -60,6 +60,9 @@ rpicam-vid -t 0 --width 1536 --height 864 --hdr off  --nopreviewv 1\
 ```
 ### streamsteady.sh
 ```
+sudo nano streamsteady.sh
+```
+```
 #!/bin/bash
 nice -n -19 rpicam-vid -t 0 --width 1920 --height 1080 \
 --nopreview 1 --low-latency 1 --hdr off --flush 1 \
