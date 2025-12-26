@@ -145,9 +145,13 @@ database_port 3306
 database_user motiondb
 database_password Mfoxboltgold
 ```
-
-motion.service
-
+```
+sudo systemctl status MariaDB
+```
+```
+sudo nano /etc/systemd/system/motion.service
+```
+```
 [Unit]
 Description=motion Server
 
@@ -157,16 +161,16 @@ Restart=on-abort
 
 [Install]
 WantedBy=multi-user.target
+```
 
-
-
-
-
-/usr/local/bin/motionplus
-sudo systemctl status MariaDB
-
-
-find /var/lib/motionplus -type f -mtime +2 -name '*.mkz' -execdir rm -- '{}' \;
+```
+sudo chmod 644 /etc/systemd/system/motion.service
+```
+Finally, tell systemd to run it at boot:
+```
+sudo systemctl enable motion.service
+```
+find usr/local/var/lib/motion/media -type f -mtime +2 -name '*.mkz' -execdir rm -- '{}' \;
 
 iwconfig wlan0
 sudo iw wlan0 set power_save off
