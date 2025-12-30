@@ -173,7 +173,7 @@ Finally, tell systemd to run it at boot:
 sudo systemctl enable motion.service
 ```
 ```
-find usr/local/var/lib/motion/media -type f -mtime +2 -name '*.mkz' -execdir rm -- '{}' \;
+find /usr/local/var/lib/motion/media -type f -mtime +1 -name '*.mkz' -execdir rm -- '{}' \;
 ```
 iwconfig wlan0
 sudo iw wlan0 set power_save off
