@@ -27,6 +27,8 @@ sudo make install
 ```
 ### Installed in
  /usr/bin/mkdir -p '/usr/local/var/lib/motion'
+
+ find /usr/var/lib/motion/media -type f -mtime +2 -name '*.mkz' -execdir rm -- '{}' \;
  /usr/bin/install -c -m 644 data/motion-dist.conf data/camera1-dist.conf data/camera2-dist.conf data/camera3-dist.conf data/sound1-dist.conf '/usr/local/var/lib/motion'
  /usr/bin/mkdir -p '/usr/local/var/lib/motion/webcontrol'
  /usr/bin/install -c -m 644 data/webcontrol/samplepage.html '/usr/local/var/lib/motion/webcontrol'
