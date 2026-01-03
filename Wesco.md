@@ -1,36 +1,39 @@
 📋 Detailed explanation of the options
-Option	Value	Explanation
-nice -n -19		Prioritize the stream process. is the highest priority and secures computing power.-19
--t 0		Infinite recording time (0 milliseconds), i.e. the stream runs until it is stopped.
---width, --height	1920, 1080	Sets the FullHD resolution (1080p).
---nopreview 1		Disables local image preview, saves resources.
---low-latency 1		Important for low delays in the stream.
---hdr off		High Dynamic Range (HDR) is disabled to ensure a more authentic look.
---flush 1		Increases responsiveness and reduces buffering.
---buffer-count 6		Number of buffers used for the video frames. Optimized for streaming.
---exposure long		Exposure time set to 'long', often good for indoors/low light.
---sharpness 1.1, --contrast 1.2		Adjustment of the image properties (here slightly increased).
---codec libav		Uses the libav library for encoding and streaming.
---libav-audio 1		Enables audio processing by Libav.
---audio-source alsa		Defines ALSA as the audio source to bypass Pulse/Pipewire.
---audio-device hw:0,0		The specific audio device (card 0, device 0), determined by .arecord -l
---audio-codec aac		Audio codec AAC (Advanced Audio Coding), standard for streaming.
---audio-samplerate 48000		Sample rate for audio recording (48 kHz).
---audio-bitrate 128000		Audio bitrate of 128 kbps.
---libav-format flv		FLV (Flash Video) container format, standard for RTMP streaming.
--n		Disables saving to a local file.
---framerate 30		The desired frame rate per second.
--b 4500000		Video bitrate of 4.5 Mbps (4500000 bits per second).
---autofocus-mode manual		Autofocus is set manually.
---lens-position 0.8		Manual adjustment of the focus position for a firm focus.
---inline 1		Inserts PLC/PPS headers into the stream (important for decoding).
--o "rtmp://..."		The output URL to the Nginx-RTMP server.
-6. Automatic start: Stream as a system service
+| Option	Value	Explanation | | |
+| | | |
+|  nice -n -19 |		Prioritize the stream process. is the highest priority and secures computing power.| -19 |
+|  -t 0	|	Infinite recording time (0 milliseconds), i.e. the stream runs until it is stopped. | |
+|  --width, --height	1920, 1080	| Sets the FullHD resolution (1080p). | |
+|  --nopreview 1	|	Disables local image preview, saves resources. | |
+|  --low-latency 1	|	Important for low delays in the stream. | |
+|  --hdr off	|	High Dynamic Range (HDR) is disabled to ensure a more authentic look. | |
+|  --flush 1	|	Increases responsiveness and reduces buffering. | |
+|  --buffer-count 6	|	Number of buffers used for the video frames. Optimized for streaming. | |
+|  --exposure long	|	Exposure time set to 'long', often good for indoors/low light. | |
+|  --sharpness 1.1, --contrast 1.2	|	Adjustment of the image properties (here slightly increased). | |
+|  --codec libav		Uses the libav library for encoding and streaming. | |
+|  --libav-audio 1	|	Enables audio processing by Libav. | |
+|  --audio-source alsa	|	Defines ALSA as the audio source to bypass Pulse/Pipewire. | |
+|  --audio-device hw:0,0		The specific audio device (card 0, device 0), determined by .arecord -l | |
+|  --audio-codec aac	|	Audio codec AAC (Advanced Audio Coding), standard for streaming. | |
+|  --audio-samplerate 48000	|	Sample rate for audio recording (48 kHz). | |
+|  --audio-bitrate 128000	|	Audio bitrate of 128 kbps. | |
+|  --libav-format flv	|	FLV (Flash Video) container format, standard for RTMP streaming. | |
+|  -n	|	Disables saving to a local file. | |
+|  --framerate 30	|	The desired frame rate per second. | |
+|  -b 4500000	|	Video bitrate of 4.5 Mbps (4500000 bits per second). | |
+|  --autofocus-mode manual	|	Autofocus is set manually. | |
+|  --lens-position 0.8	|	Manual adjustment of the focus position for a firm focus. | |
+|  --inline 1	|	Inserts PLC/PPS headers into the stream (important for decoding). | |
+|  -o "rtmp://..."	|	The output URL to the Nginx-RTMP server. | |
+
+###  6. Automatic start: Stream as a system service
 To automatically start the stream at boot, we create a system service unit.
 
-1. Create a service file:
-
-nano /lib/systemd/system/stream.service
+#### 1. Create a service file:
+```
+sudo nano /lib/systemd/system/stream.service
+```
 2. Content stream.service:
 
 [Unit]
