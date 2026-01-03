@@ -9,7 +9,15 @@ Review the script and specify the following few optional parameters. Username, E
 Once the script has been run and the deb file is created, install it as described above.
 
 
+### Change Hostname Trixie
 
+```
+touch /etc/cloud/cloud-init.disabled
+```
+Run 
+```
+sudo raspi-config
+```
 
 ### Add required Motion libraries
 
