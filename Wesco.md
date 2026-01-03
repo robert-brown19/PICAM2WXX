@@ -1,6 +1,6 @@
 📋 Detailed explanation of the options
 | Option	Value	Explanation | | |
-| | | |
+|-----| ---- | ---- |
 |  nice -n -19 |		Prioritize the stream process. is the highest priority and secures computing power.| -19 |
 |  -t 0	|	Infinite recording time (0 milliseconds), i.e. the stream runs until it is stopped. | |
 |  --width, --height	1920, 1080	| Sets the FullHD resolution (1080p). | |
