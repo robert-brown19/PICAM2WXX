@@ -24,7 +24,15 @@ sudo nmcli con edit PodZero1
 nmcli> set connection.autoconnect-priority 10
 nmcli> save persistent
 ```
+### Change Hostname Trixie
 
+```
+touch /etc/cloud/cloud-init.disabled
+```
+Run 
+```
+sudo raspi-config
+```
 - [ ] Package Task
 ```
 sudo apt purge rpicam-apps-lite -y
