@@ -57,6 +57,9 @@ sudo apt autoremove
 sudo nano streamslow.sh
 ```
 ```
+sudo chmod 700 ./streamslow.sh
+```
+```
 #!/bin/bash
 
 rpicam-vid -t 0 --width 1536 --height 864 --hdr off  --nopreviewv 1\
