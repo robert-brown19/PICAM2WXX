@@ -107,5 +107,14 @@ Finally, tell systemd to run it at boot:
 sudo systemctl enable streamslow.service
 ```
 ```
+sudo systemctl start streamslow.service
+```
+```
+sudo systemctl restart streamslow.service
+```
+```
 sudo systemctl stop streamslow.service
+```
+```
+sudo systemctl restart motionplus.service
 ```
