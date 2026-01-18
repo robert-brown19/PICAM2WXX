@@ -59,10 +59,11 @@ sudo nano streamslow.sh
 ```
 sudo chmod 700 ./streamslow.sh
 ```
+### streamslow.sh
 ```
 #!/bin/bash
 
-rpicam-vid -t 0 --width 1536 --height 864 --hdr off  --nopreviewv 1\
+rpicam-vid -t 0 --width 1536 --height 864 --hdr off  --nopreview 1\
         --exposure long --sharpness 1.2 --contrast 1.4 --brightness 0.1 --saturation 1.0 \
         --awb auto --denoise auto --profile high --level 4.2 --codec libav \
         --av-sync 0 --libav-format flv -n --framerate 3 -b 1550000 --autofocus-mode manual --lens-position 0.5 \
@@ -70,6 +71,7 @@ rpicam-vid -t 0 --width 1536 --height 864 --hdr off  --nopreviewv 1\
         -o "rtmp://192.168.1.12/pi/PiCam2W51"
 ```
 ### streamsteady.sh
+Audio Support
 ```
 #!/bin/bash
 nice -n -19 rpicam-vid -t 0 --width 1920 --height 1080 \
