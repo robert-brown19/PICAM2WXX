@@ -27,7 +27,7 @@ nmcli> save persistent
 ### Change Hostname Trixie
 
 ```
-touch /etc/cloud/cloud-init.disabled
+sudo touch /etc/cloud/cloud-init.disabled
 ```
 Run 
 ```
