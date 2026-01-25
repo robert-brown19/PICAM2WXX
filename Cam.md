@@ -100,7 +100,9 @@ Type=idle
 [Install]
 WantedBy=multi-user.target
 ```
+```
 sudo nano /etc/systemd/system/streamsteady.service
+```
 ```
 [Unit]
 Description=Start Camera stream service
