@@ -100,6 +100,30 @@ Type=idle
 [Install]
 WantedBy=multi-user.target
 ```
+sudo nano /etc/systemd/system/streamsteady.service
+```
+[Unit]
+Description=Start Camera stream service
+After=network.target
+Wants=network-online.target
+StartLimitIntervalSec=3
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStartPre=/bin/sleep 1
+Nice=-12
+Restart=always
+RestartSec=5
+User=root
+WorkingDirectory=/home/fox-admin
+ExecStart=/home/fox-admin/streamsteady.sh
+
+[Install]
+WantedBy=multi-user.target
+
+
+```
 
 ```
 sudo chmod 644 /etc/systemd/system/streamslow.service
