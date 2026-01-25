@@ -79,7 +79,9 @@ Default Dir /usr/local/var/lib/motion
 ```
 sudo mkdir /usr/local/var/lib/motion/conf.d
 ```
-
+```
+sudo mkdir /usr/local/var/lib/motion/media
+```
 ```
 sudo cp /usr/local/var/lib/motion/camera1-dist.conf /usr/local/var/lib/motion/conf.d/camera.conf
 ```
@@ -116,7 +118,9 @@ ffmpeg -f v4l2 -input_format h264 -video_size 1280x720 -framerate 30 -i /dev/vid
 ```
 text_left Kitchen
 text_right ip_Address\n%Y-%m-%d\n%T-%q
-text_scale 2
+```
+```
+text_scale 3
 ```
 
 Database
