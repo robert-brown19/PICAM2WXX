@@ -104,6 +104,17 @@ Type=idle
 WantedBy=multi-user.target
 ```
 ```
+#!/bin/bash
+nice -n -19 rpicam-vid -t 0 --width 1456 --height 1088 \
+--nopreview 1 --low-latency 1 --hdr off --flush 1 \
+--buffer-count 6 --exposure long --sharpness 1.1 --contrast 1.2 \
+--brightness 0.0 --saturation 1.0 --ev +1.0 --awb auto \
+--profile high --level 4.2 --codec libav --libav-format flv \
+-n --framerate 5 -b 1550000 --autofocus-mode manual --lens-position 0.8 \
+--denoise auto --autofocus-window 0.25,0.25,0.5,0.5 --inline -g 60 \
+-o "rtmp://192.168.1.12/pi/PiCam2W55"
+```
+```
 sudo nano /etc/systemd/system/streamsteady.service
 ```
 ```
