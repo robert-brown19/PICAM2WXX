@@ -20,9 +20,12 @@ sudo nmcli con show
 ```
 sudo nmcli con edit PodZero1
 ```
+
+nmcli>
+``` set connection.autoconnect-priority 10```
+nmcli> 
 ```
-nmcli> set connection.autoconnect-priority 10
-nmcli> save persistent
+save persistent
 ```
 ### Change Hostname Trixie
 
@@ -82,7 +85,7 @@ nice -n -19 rpicam-vid -t 0 --width 1920 --height 1080 \
 --audio-source alsa --audio-device hw:0,0 --audio-channels 1 \
 --audio-codec aac \
 --audio-samplerate 48000 --audio-bitrate 128000 --libav-format flv \
--n --framerate 30 -b 4500000 --autofocus-mode manual --lens-position 0.8 \
+-n --framerate 3 -b 150000 --autofocus-mode manual --lens-position 0.8 \
 --denoise auto --autofocus-window 0.25,0.25,0.5,0.5 --inline 1 \
 -o "rtmp://192.168.1.12/pi/PiCam2W51"
 ```
