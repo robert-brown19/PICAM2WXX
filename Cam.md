@@ -133,7 +133,7 @@ Restart=always
 RestartSec=5
 User=root
 WorkingDirectory=/home/fox-admin
-ExecStart=/home/fox-admin/streamsteady.sh
+ExecStart=/home/fox-admin/streamslow.sh
 
 [Install]
 WantedBy=multi-user.target
