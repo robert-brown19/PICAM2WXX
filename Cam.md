@@ -12,7 +12,13 @@ sudo apt update && sudo apt full-upgrade -y
 sudo nmcli con add type wifi con-name PodZero1 ssid PodZero1 802-11-wireless-security.key-mgmt wpa-psk
 ```
 ```
+sudo nmcli dev wifi list
+```
+```
 sudo nmcli --ask con up id "PodZero1"
+```
+```
+sudo nmcli dev wifi connect "PodZero1" password Foxboltgold
 ```
 ```
 sudo nmcli con show
@@ -22,7 +28,9 @@ sudo nmcli con edit PodZero1
 ```
 
 nmcli>
-``` set connection.autoconnect-priority 10```
+``` 
+set connection.autoconnect-priority 10
+```
 nmcli> 
 ```
 save persistent
