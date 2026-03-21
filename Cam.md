@@ -15,6 +15,9 @@ sudo nmcli con add type wifi con-name PodZero1 ssid PodZero1 802-11-wireless-sec
 sudo nmcli dev wifi list
 ```
 ```
+nmcli connection modify PodHosts wifi-sec.psk Foxboltgold
+```
+```
 sudo nmcli --ask con up id "PodZero1"
 ```
 ```
