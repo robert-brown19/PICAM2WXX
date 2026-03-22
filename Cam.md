@@ -18,7 +18,7 @@ sudo nmcli dev wifi list
 nmcli connection modify PodHosts wifi-sec.psk Foxboltgold
 ```
 ```
-sudo nmcli --ask con up id "PodZero1"
+sudo nmcli con up PodHosts
 ```
 ```
 sudo nmcli dev wifi connect "PodZero1" password Foxboltgold
