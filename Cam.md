@@ -15,7 +15,7 @@ sudo nmcli con add type wifi con-name PodZero1 ssid PodZero1 802-11-wireless-sec
 sudo nmcli dev wifi list
 ```
 ```
-nmcli connection modify PodHosts wifi-sec.psk Foxboltgold
+sudo nmcli connection modify PodHosts wifi-sec.psk Foxboltgold
 ```
 ```
 sudo nmcli con up PodHosts
@@ -30,11 +30,9 @@ sudo nmcli con show
 sudo nmcli con edit PodZero1
 ```
 
-nmcli>
 ``` 
 set connection.autoconnect-priority 10
 ```
-nmcli> 
 ```
 save persistent
 ```
