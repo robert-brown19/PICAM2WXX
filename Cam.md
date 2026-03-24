@@ -124,7 +124,7 @@ nice -n -19 rpicam-vid -t 0 --width 1456 --height 1088 \
 -o "rtmp://192.168.1.12/pi/PiCam2W55"
 ```
 ```
-sudo nano /etc/systemd/system/streamsteady.service
+sudo nano /etc/systemd/system/streamslow.service
 ```
 ```
 [Unit]
