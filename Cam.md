@@ -9,7 +9,7 @@ sudo apt update && sudo apt full-upgrade -y
 
 - [ ] WiFi Task
 ```
-sudo nmcli con add type wifi con-name PodZero1 ssid PodZero1 802-11-wireless-security.key-mgmt wpa-psk
+sudo nmcli con add type wifi con-name PodHosts ssid PodHosts 802-11-wireless-security.key-mgmt wpa-psk
 ```
 ```
 sudo nmcli dev wifi list
@@ -21,13 +21,13 @@ sudo nmcli connection modify PodHosts wifi-sec.psk Foxboltgold
 sudo nmcli con up PodHosts
 ```
 ```
-sudo nmcli dev wifi connect "PodZero1" password Foxboltgold
+sudo nmcli dev wifi connect "PodHosts" password Foxboltgold
 ```
 ```
 sudo nmcli con show
 ```
 ```
-sudo nmcli con edit PodZero1
+sudo nmcli con edit PodHosts
 ```
 
 ``` 
