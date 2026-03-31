@@ -54,7 +54,7 @@ sudo apt install ffmpeg rpicam-apps libavcodec-dev libavdevice-dev libavformat-d
 ```
 For Audio
 ```
-sudo apt install pulseaudio-utils
+sudo apt install pulseaudio pulseaudio-utils
 ```
 ```
 sudo apt autoremove
