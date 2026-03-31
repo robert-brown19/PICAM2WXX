@@ -52,6 +52,10 @@ sudo apt purge rpicam-apps-lite -y
 ```
 sudo apt install ffmpeg rpicam-apps libavcodec-dev libavdevice-dev libavformat-dev libswresample-dev -y
 ```
+For Audio
+```
+sudo apt install pulseaudio-utils
+```
 ```
 sudo apt autoremove
 ```
