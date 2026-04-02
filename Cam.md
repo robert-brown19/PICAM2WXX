@@ -57,6 +57,15 @@ For Audio
 sudo apt install pulseaudio pulseaudio-utils
 ```
 ```
+systemctl --user enable --now pulseaudio
+```
+Test
+XDG_RUNTIME_DIR=/run/user/$(id -u) pactl info
+
+Fix
+
+
+```
 sudo apt autoremove
 ```
 
