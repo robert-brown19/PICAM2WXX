@@ -77,6 +77,7 @@ sudo apt autoremove
 | Camera Module v3 | 2304 × 1296p56 | 2304 × 1296p30 HDR | 1536 × 864p120 |  
 | Camera Module v3 Wide | 2304 × 1296p56 | 2304 × 1296p30 HDR | 1536 × 864p120 |
 | GS Camera Module | 1456 × 1088p60 |  | |
+| AI Camera Module | 2028 × 1520p30 | 4056 x 3040p10| |
 
 ```
 sudo nano streamslow.sh
